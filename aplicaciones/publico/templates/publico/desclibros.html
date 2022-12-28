@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Descargar Libros{% endblock %}
+
+
+{% block content %}
+<br><br>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-3">Bienvenid@ <strong>{{ user.first_name }}</strong> al sitio</h1>
+            <p class="lead">Aquí podrás descargar directamente el libro que desees</p>
+            <hr class="my-2">
+        </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4 p-5">
+    {% for libro in libros %}
+    <div class="col">
+        <div class="card h-100 border-info">
+            <img class="card-img-top img-thumbnail" src="{{ libro.imagen }}" alt="{{libro.titulo}}">
+            <div class="card-body">
+                <h4 class="card-title">{{ libro.titulo }}</h4>
+                <p class="card-text">
+                    {{ libro.descripcion }} <br>
+                    <a name="" id="" class="btn btn-success" href="{{ libro.url }}" role="button">Descargar</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- ENLACE PARA DESCARGAR ARCHIVOS DE GOOGLE DRIVE DIRECTAMENTE, SOLO CAMBIAR EL ID: https://drive.google.com/u/0/uc?id=0B8lK02sZ8njTdkZhN3hTYS1uSDg&export=download -->
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock title %}
+
+
+{% block content %}
+<br><br>
+<br><br>
+<br>
+<div class="card col-lg-4 col-sm-4 col-md-5 container-fluid mt-sm-6">
+    <div class="card-header text-center rounded">
+        <h1>Iniciar sesion</h1>
+    </div>
+    <div class="card-body text-center">
+        {{error}}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input name="" id="" class="btn btn-success" type="submit" value="Ingresar">
+            <a name="" id="" class="btn btn-primary" href="{% url 'inicio' %}" role="button">Cancelar</a>
+        </form>
+    </div>
+</div>
+    
+{% endblock content %}
+    

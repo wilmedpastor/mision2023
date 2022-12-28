@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Inicio Admin {% endblock title %}
+
+{% block content %}
+<br><br>
+<br><br>
+<div class="p-5 bg-light rounded-3">
+    <div class="container">
+      <h1 class="display-3">Bienvenido <span>{{user.first_name|upper }}</span> al sitio de Administración </h1>
+      <p class="lead">Administrar Usuarios</p>
+      <hr class="my-2">
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'usuarios' %}" role="button">Empezar</a>
+      </p>
+      <p class="lead">Administrar Libros</p>
+      <hr class="my-2">
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'libros' %}" role="button">Empezar</a>
+      </p>
+    </div>
+  </div>    
+{% endblock content %}

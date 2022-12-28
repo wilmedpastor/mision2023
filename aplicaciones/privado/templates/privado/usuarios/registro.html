@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Registro Usuario {% endblock title %}
+
+{% block content %}
+<br><br>
+<br><br>
+<div class="card col-lg-4 col-md-6 col-sm-6 container-fluid">
+    <div class="card-header text-center">
+        Registro Usuario Nuevo
+    </div>
+    <div class="card-body">
+        <h4 class="card-title text-center">Datos Usuario:</h4>
+        {% include 'privado/usuarios/form.html' %}
+    </div>
+    <div class="card-footer text-muted">        
+    </div>
+</div>
+    
+{% endblock content %}
+    
